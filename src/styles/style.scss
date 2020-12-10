@@ -1,0 +1,152 @@
+$green_original: rgba(94, 241, 94, 0.417);
+$green_active: rgba(0, 218, 0, 0.657);
+
+$blue_original: rgba(0, 0, 255, 0.513);
+$blue_active: rgba(0, 0, 255, 0.863);
+
+$red_original: rgba(241, 64, 64, 0.445);
+$red_active: rgba(255, 0, 0, 0.746);
+
+$yellow_original: rgba(255, 255, 90, 0.459);
+$yellow_active: rgba(255, 255, 0, 0.828);
+
+
+.colors {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 49px -18px rgba(0, 0, 0, 0.79);
+    overflow: hidden;
+    transition: 0.5s;
+
+    .color {
+        width: 100px;
+        height: 100px;
+        border: 0px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+}
+
+.spin {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        ransform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.info {
+    h3 {
+        height: 50px;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        width: 95%;
+
+        .complexity {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+#start,
+#superButton {
+    width: 100px;
+    height: 50px;
+    border: 0px;
+    transition: all 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50px;
+    color: rgb(250, 250, 250);
+    background: rgb(155, 155, 155);
+}
+
+#start:disabled {
+    color: rgb(250, 250, 250);
+    background: rgb(201, 202, 202);
+}
+
+input,
+button {
+    outline: none;
+}
+
+.green {
+    background-color: $green_original;
+}
+
+.green:hover,
+.green_active {
+    background-color: $green_active;
+}
+
+
+.blue {
+    background-color: $blue_original;
+}
+
+.blue:hover,
+.blue_active {
+    background-color: $blue_active;
+}
+
+.red {
+    background-color: $red_original;
+}
+
+.red:hover,
+.red_active {
+    background-color: $red_active;
+}
+
+.yellow {
+    background-color: $yellow_original;
+}
+
+.yellow:hover,
+.yellow_active {
+    background-color: $yellow_active;
+}
+
+
+@media screen and (max-width: 471px) {
+    .colors {
+        margin-right: 0px;
+    }
+
+    .green:hover {
+        background-color: $green_original;
+    }
+
+    .blue:hover {
+        background-color: $blue_original;
+    }
+
+    .red:hover {
+        background-color: $red_original;
+    }
+
+    .yellow:hover {
+        background-color: $yellow_original;
+    }
+}
